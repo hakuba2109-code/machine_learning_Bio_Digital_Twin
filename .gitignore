@@ -1,0 +1,16 @@
+# Excluded from version control and from Agent ripgrep-based search
+# (Grep/Glob). Mirrors .qoderignore, which the Qoder context layer reads.
+
+# Python
+.venv/
+__pycache__/
+
+# Build output
+target/
+node_modules/
+
+# Logs
+*.log
+
+# Secrets (QODER.md: credentials live only in .env)
+.env

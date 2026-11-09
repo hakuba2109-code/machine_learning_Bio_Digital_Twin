@@ -1,0 +1,10 @@
+# ripgrep-native ignore file. Works even though this folder is not a git
+# repository, which is why .gitignore alone does not filter Agent Grep/Glob.
+# Mirrors .qoderignore / .gitignore — keep all three in sync.
+
+.venv/
+__pycache__/
+target/
+node_modules/
+*.log
+.env

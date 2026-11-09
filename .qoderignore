@@ -1,0 +1,16 @@
+# Excluded from Agent codebase scanning / context window.
+# Syntax: gitignore-style patterns, one per line.
+
+# Python
+.venv/
+__pycache__/
+
+# Build output
+target/
+node_modules/
+
+# Logs
+*.log
+
+# Secrets (QODER.md: credentials live only in .env)
+.env

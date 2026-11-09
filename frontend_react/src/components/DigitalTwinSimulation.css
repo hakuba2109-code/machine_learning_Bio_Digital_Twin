@@ -1,0 +1,30 @@
+/* DigitalTwinSimulation Component Styles */
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Chart container */
+canvas {
+  max-width: 100%;
+}
+
+/* Risk level card transitions */
+.risk-card {
+  transition: all 0.3s ease;
+}
+
+.risk-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

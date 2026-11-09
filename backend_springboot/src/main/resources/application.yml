@@ -1,0 +1,30 @@
+# Bio-Digital Twin backend configuration.
+# Secrets are NOT stored here (QODER.md rule): they come from environment
+# variables loaded from backend_springboot/.env.
+spring:
+  application:
+    name: bio-digital-twin-backend
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/biodigitaltwin}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: ${PORT:3000}
+
+ml:
+  service:
+    # FastAPI (ml_service/main_api.py) runs on 8000; 3000 is this backend's own
+    # port, so pointing here at 3000 would make the backend call itself.
+    url: ${ML_SERVICE_URL:http://localhost:8000}
